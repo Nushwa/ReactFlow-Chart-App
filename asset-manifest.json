@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactFlow-Football-Data/static/css/main.599562d6.css",
+    "main.js": "/ReactFlow-Football-Data/static/js/main.86ecd718.js",
+    "static/js/787.5cad1952.chunk.js": "/ReactFlow-Football-Data/static/js/787.5cad1952.chunk.js",
+    "index.html": "/ReactFlow-Football-Data/index.html",
+    "main.599562d6.css.map": "/ReactFlow-Football-Data/static/css/main.599562d6.css.map",
+    "main.86ecd718.js.map": "/ReactFlow-Football-Data/static/js/main.86ecd718.js.map",
+    "787.5cad1952.chunk.js.map": "/ReactFlow-Football-Data/static/js/787.5cad1952.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.599562d6.css",
+    "static/js/main.86ecd718.js"
+  ]
+}
