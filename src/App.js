@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { getFlowchartData } from "./getFlowchartData";
+import Flowchart from "./Flowchart";
 
-function App() {
+export default function App() {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchedData = await getFlowchartData();
+        // console.log("Fetched Data:", fetchedData);
+        setData(fetchedData);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Premier League 2015/16 Football Match Data</h1>
+      {isLoading ? <div>Loading...</div> : <Flowchart data={data} />}
     </div>
   );
 }
-
-export default App;
